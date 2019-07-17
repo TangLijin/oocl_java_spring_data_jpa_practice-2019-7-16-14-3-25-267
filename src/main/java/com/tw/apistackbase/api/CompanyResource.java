@@ -40,6 +40,9 @@ public class CompanyResource {
          companyRepository.deleteById(id);
     }
 
-
+    @DeleteMapping("/{id}")
+    public void delete2(@RequestParam Long id) {
+        companyRepository.deleteById(id);
+    }
 
 }

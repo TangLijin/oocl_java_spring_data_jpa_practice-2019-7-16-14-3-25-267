@@ -29,6 +29,12 @@ public class CompanyResource {
         return companyRepository.save(company);
     }
 
+//    @PostMapping(params = {"company"},produces = {"application/json"})
+//    public Company update2(@RequestBody Company company) {
+//        //companyRepository.deleteById(company.getId());
+//        return companyRepository.save(company);
+//    }
+
     @DeleteMapping
     public void delete(@RequestParam Long id) {
          companyRepository.deleteById(id);

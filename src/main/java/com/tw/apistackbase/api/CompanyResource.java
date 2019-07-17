@@ -23,6 +23,7 @@ public class CompanyResource {
     }
 
 
+
     @PutMapping(produces = {"application/json"})
     public Company update(@RequestBody Company company) {
         //companyRepository.deleteById(company.getId());
@@ -35,13 +36,13 @@ public class CompanyResource {
 //        return companyRepository.save(company);
 //    }
 
-    @DeleteMapping
-    public void delete(@RequestParam Long id) {
-         companyRepository.deleteById(id);
-    }
+//    @DeleteMapping
+//    public void delete(@RequestParam Long id) {
+//         companyRepository.deleteById(id);
+//    }
 
     @DeleteMapping("/{id}")
-    public void delete2(@RequestParam Long id) {
+    public void delete(@RequestParam Long id) {
         companyRepository.deleteById(id);
     }
 

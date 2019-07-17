@@ -21,4 +21,15 @@ public class CompanyResource {
     public Company add(@RequestBody Company company) {
         return companyRepository.save(company);
     }
+
+
+    @PutMapping(produces = {"application/json"})
+    public Company update(@RequestBody Company company) {
+        //companyRepository.deleteById(company.getId());
+        return companyRepository.save(company);
+    }
+
+
+
+
 }
